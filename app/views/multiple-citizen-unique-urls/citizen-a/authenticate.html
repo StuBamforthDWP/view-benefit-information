@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {% include '../includes/phase-banner.njk' %}
+  {% include '../../includes/phase-banner.njk' %}
   <a class="govuk-back-link" href="start">Back</a>
 {% endblock %}
 
@@ -14,9 +14,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Sign in through DWP Authenticate</h1>
+      <h1 class="govuk-heading-xl">Sign in</h1>
 
-      <p>To view DLA Benefit information, you need to prove it's you signing in.</p>
 
 
       <form class="form" action="summary" method="post">
@@ -39,6 +38,8 @@
         <button class="govuk-button">Continue</button>
 
         <p><a href="#">Forgotten password</a></p>
+
+        <p><a href="#">Create account</a></p>
 
       </form>
     </div>
