@@ -1,0 +1,41 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+.guidance-layout {
+    word-wrap: break-word;
+    background-color: #005ea5;
+    padding: 50px 30px 30px;
+    display: block;
+}
+.guidance-layout h1, .guidance-layout p, .guidance-layout ul, .guidance-layout h2, .guidance-layout .govuk-summary-list{
+    color:#fff;
+}
+
+.guidance-layout .govuk-button, .guidance-layout .drop-area__btn, .guidance-layout .js-enabled .dft-fu__add-file-btn, .js-enabled .guidance-layout .dft-fu__add-file-btn {
+    color: #005ea5;
+    background-color: #fff;
+}
+
+.guidance-layout .govuk-warning-text{
+    color:#fff;
+}
+.guidance-layout .govuk-warning-text__icon{
+    border: 3px solid #fff;
+    border-radius: 50%;
+    color: #005ea5;
+    background: #fff;
+}

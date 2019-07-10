@@ -1,0 +1,207 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Share your benefit information - LA Journey
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      View benefit information 
+      <span class="govuk-caption-xl">v1</span>
+    </h1>{{releaseVersion | log }}
+    <h2 class="govuk-heading-s">Created: 9 July 2019</h2>
+
+    <p>Changes:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>...</li>
+    </ul>
+
+    <p>User research aims:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Observe how local authority staff process requests</li>
+      <li>Observe how local authority staff would archive requests</li>
+    </ul>
+
+
+    <h2 class="govuk-heading-s">Journeys</h2>
+
+    <p><a href="/single-citizen-unique-url/authenticate">Single citizen - unique url</a></p>
+    <p><a href="/multiple-citizen-unique-url/">Multiple citizen - unique urls</a></p>
+    <p><a href="/single-citizen-code/authenticate">Single citizen - code</a></p>
+    <p><a href="/multiple-citizen-codes/">Multiple citizen - codes</a></p>
+
+
+
+
+
+   <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Other prototype versions
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+
+
+          <span class="govuk-caption-x">v3</span>
+        <h2 class="govuk-heading-s">Created: 19 June 2019</h2>
+
+      
+      <p>Changes:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>made the service agnostic by removing blue badge references</li>
+        <li>split data matching questions into individual pages (full name, postcode and date of birth)</li>
+        <li>added new page 'How we'll find your benefit information'</li>
+        <li>added a new set of enhanced trust questions (marriage date, GP surgery, Carer's Allowance and other benefits)</li>
+        <li>added a page caption 'Prove who you are' for enhanced trust questions</li>
+        <li>hidden benefit info playback to user</li>
+        <li>combined confirmation email/text questions into one and moved it before final 'share information' task</li>
+
+      </ul>
+
+      <p>User research aims:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>test if users understand what the service is by making it more agnostic i.e. not Blue Badge focussed</li>
+        <li>find out if and why users need to view their benefit information</li>
+        <li>test new enhanced trust questions</li>
+        <li>test if users understand why enhanced trust questions are being asked – do they see the section caption?</li>
+        <li>test new version of confirmation page – do users understand who is sending their benefit info?</li>
+
+      </ul>
+
+        <h2 class="govuk-heading-s">Prototype notes</h2>
+
+       <p><a href="../../public/pdfs/ur-notes-v2.pdf">Research notes</a></p>
+        <p>
+          <a href="/apply/v3/start" class="govuk-button">Open prototype</a>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+
+
+
+
+
+
+
+
+        <span class="govuk-caption-x">v2</span>
+      </h1>
+      <h2 class="govuk-heading-s">Created: 7 May 2019</h2>
+
+    <p>Changes:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>changed service name and start page content</li>
+      <li>combined default data matching questions on one page</li>
+      <li>added more possible 'enhanced' trust questions</li>
+      <li>removed reference code from confirmation page</li>
+      <li>changed 'send' to 'share' throughout service</li>
+      <li>changed 'local council' to 'council' throughout service</li>
+      <li>added confirmation text or email options</li>
+    </ul>
+
+    <p>User research aims:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>test if users' understand what the service is and does from the start page</li>
+      <li>test users' understanding and reactions to 'I understand' statements</li>
+      <li>observe reactions to possble 'enhanced trust' questions to verify who they are</li>
+      <li>observe reactions to email or text confirmation options</li>
+
+    </ul>
+    <p>Research showed that:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>some users are still confused about what the service does based on the start page</li>
+    <li>research finding 2</li>
+    <li>resaerch finding 2 etc</li>
+  </ul>
+
+      <h2 class="govuk-heading-s">Prototype notes</h2>
+
+      <p><a href="../../public/pdfs/ur-notes-v2.pdf">Research notes</a></p>
+      <p>
+        <a href="/apply/v2/start" class="govuk-button">Open prototype</a>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+          <span class="govuk-caption-xl">v1</span>
+        </h1>{{releaseVersion | log }}
+        <h2 class="govuk-heading-s">Created: 16 April 2019</h2>
+
+        <p>Changes:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>prototype created</li>
+        </ul>
+
+        <p>Research showed:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>some users wrongly thought the service is to apply for a Blue Badge</li>
+          <li>some users would drop out if they had to create an ID account</li>
+          <li>all users were able to select their council from 4 radio buttons</li>
+          <li>some users expected to see a list of addresses to select after entering a postcode– but address isn't needed</li>
+          <li>all users understand what will happen to their PIP or DLA info when they click 'Send to your council'</li>
+          <li>all users were confused about what the reference code is for and what to do next on the last page</li>
+        </ul>
+
+
+        <p>Caveats:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>we don't know yet what the best way for users to prove who they are is (Government Gateway is just one example)
+          <li>private beta will cover information sharing for a small number of councils</li>
+          <li>this version is for a stand-alone service for citizens who apply for a Blue Badge using their local council's online service or paper form</li>
+          <li>we need to test a version that is part of a seamless Apply for a Blue Badge service
+          <li>this version is the happy path user journey – we also need to test an unhappy path journey</li>
+        </ul>
+
+
+
+          <h2 class="govuk-heading-s">Prototype notes</h2>
+          <p><a href="../../public/pdfs/ur-notes-v1.pdf">Research notes</a></p>
+          <p>
+            <a href="/apply/v1/start" class="govuk-button">Open prototype</a>
+          </p>
+
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+          <!-- <span class="govuk-caption-x">v0.x</span>
+        </h1>
+        <h2 class="govuk-heading-s">Created: DD Month 2018</h2>
+        <p>Research showed that users:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>reserach finding 1</li>
+        <li>research finding 2</li>
+        <li>resaerch finding 2 etc</li>
+      </ul>
+        <p>Significant changes:<p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>change 1 (e.g. Added bank details to 'Things you'll need' on start scree)</li>
+          <li>change 2 etc</li>
+        </ul>
+        <p>Smaller changes:<p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>change 1 (e.g. Added bank details to 'Things you'll need' on start scree)</li>
+          <li>Change 2 etc
+        </ul>
+        <h2 class="govuk-heading-s">Prototype notes</h2>
+        <p><a href="../../public/pdfs/version-notes/notes-vx.pdf">Version notes</a></p>
+        <p>
+          <a href="/apply/v7/start-page-steps" class="govuk-button">Open prototype</a>
+        </p> -->
+
+        </div> <!--  govuk-details-text -->
+  </div>
+</div>
+{% endblock %}

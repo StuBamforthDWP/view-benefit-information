@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Prove ID
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner.njk' %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Sign in through DWP Authenticate</h1>
+
+      <p>To view DLA Benefit information, you need to prove it's you signing in.</p>
+
+      <p>You'll need the mobile phone linked to your account to do this.</p>
+
+      <form class="form" action="enter-code" method="post">
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+       Email address
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+        Password
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="password">
+        </div>
+
+
+        <button class="govuk-button">Continue</button>
+
+        <p><a href="#">Forgotten password</a></p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

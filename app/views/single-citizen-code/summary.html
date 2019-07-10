@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Summary
+{% endblock %}
+
+{% block beforeContent %}
+{% include '../includes/phase-banner.njk' %}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<form class="form" action="contact-pref" method="post">
+
+<div class="govuk-grid-row guidance-layout" style="margin-right:0; margin-left:0">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">David Batty</h1>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Benefit type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Disability Living Allowance (DLA)
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobility component
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lower
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            DLA start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">1 January 2016</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            DLA end date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">20 February 2020</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+  
+      <button class="govuk-button">Close</button>
+
+    </div>
+
+
+  </div>
+ 
+
+  {% endblock %}
