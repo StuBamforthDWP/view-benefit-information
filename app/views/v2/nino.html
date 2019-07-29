@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Insurance number
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+<form class="form" action="summary-nino" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+        <h1 class="govuk-heading-l">Enter citizen's National Insurance number</h1>
+
+        <div class="govuk-form-group">
+
+            {{ govukInput({
+              id: "National Insurance number",
+              name: "ni-number",
+              classes: "govuk-input--width-10",
+              attributes: {
+                spellcheck: "false"
+              }
+            }) }}
+
+        </div>
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+    </div>
+  </div>
+</form>
+
+{% endblock %}

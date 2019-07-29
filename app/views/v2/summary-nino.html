@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Summary
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+
+{% if data['ni-number'] != 'JN04830A' %}
+<script>
+    window.location.href = 'mismatch'
+</script>
+{% endif %}
+
+
+<form class="form" action="contact-pref" method="post">
+
+<div class="govuk-grid-row guidance-layout" style="margin-right:0; margin-left:0">
+    <div class="govuk-grid-column-full">   
+        <h1 class="govuk-heading-l">Sharon Warnock</h1>
+    </div>
+
+    <div class="govuk-grid-column-full">
+      <p class="govuk-!-margin-top-2"></p>
+
+        <form class="form" action="summary" method="post">
+            <dl class="govuk-summary-list">
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    16 March 1950
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Benefit type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      DLA
+                    </dd>
+                  </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    DLA mobility rate
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Higher
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    DLA start date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    1 May 2019
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    DLA end date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    1 May 2022
+                  </dd>
+                </div>
+              </dl>
+    
+          <button class="govuk-button">Download PDF</button>
+    
+        </div>
+  </div>
+
+
+  {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Data mismatch
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">No record found</h1>
+
+    <p>There is no benefit record for the details you've entered.</p>
+
+    <p>You can try entering the details again or call the Department for Work on Pensions on 0800 123 4567.</p>
+
+    <p><a class="govuk-link" href="citizen-details?data=clear">Try again</a></p>
+  </div>
+</div>
+
+{% endblock %}
