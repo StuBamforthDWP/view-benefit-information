@@ -40,12 +40,19 @@
         <!--<p><a href="#">Create sign in details</a></p>-->
 
         <h2 class="govuk-heading-m">Problems signing in</h2>
-        <p><a href="#">I forgot my password</a><br />
-          <a href="#">I forgot my email address</a><br />
-          <a href="#">I don’t have the mobile phone linked to my account</a></p>
-          
+        <p style="margin-bottom:5px"><a href="#">I forgot my password</a></p>
 
-        <p><a href="#">Get help with this page</a></p>
+          {{ govukDetails({
+            summaryText: "I forgot my email address",
+            text: "Contact your organisation. They can help."
+          }) }}
+          
+          {{ govukDetails({
+            summaryText: "I don’t have the mobile phone linked to my account",
+            text: "Contact your organisation. They can help."
+          }) }}
+
+        <!--<p><a href="#">Get help with this page</a></p>-->
 
       </form>
     </div>
