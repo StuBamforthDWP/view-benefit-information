@@ -8,3 +8,15 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+$(function() {
+  var pathname = window.location.pathname;
+  var getLast = pathname.match(/.*\/(.*)$/)[1];
+  var truePath = getLast.replace(".php","");
+  if(truePath === '') {
+      $('body').attr('id', 'home');
+  }
+  else {
+      $('body').attr('id', truePath);
+  }
+});
