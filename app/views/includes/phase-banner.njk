@@ -7,4 +7,11 @@
       <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
   </p>
+
+
+  {% if data['signed-in'] == 'yes' %}
+    <p class="sign-out"><a href="sign-in?data=clear" class="govuk-link">Sign out</a></p>
+  {% else %}
+
+  {% endif %}
 </div>
