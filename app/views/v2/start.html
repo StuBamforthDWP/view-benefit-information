@@ -10,23 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "https://www.gov.uk"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }}
-
+  {% include '../includes/phase-banner.njk' %}
 {% endblock %}
 
 {% block content %}

@@ -6,7 +6,6 @@
 
 {% block beforeContent %}
   {% include '../includes/phase-banner.njk' %}
-  {% include '../includes/back-button.njk' %}
 {% endblock %}
 
 {% block content %}
@@ -21,7 +20,7 @@
 
       <p>All fields are required.</p>
 
-      <form class="form" action="signed-in" method="post">
+      <form class="form" action="citizen-details" method="post">
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="width-20">
