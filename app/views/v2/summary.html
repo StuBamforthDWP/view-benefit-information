@@ -5,8 +5,7 @@ Summary
 {% endblock %}
 
 {% block beforeContent %}
-  {% include '../includes/phase-banner.njk' %}
-  {% include '../includes/back-button.njk' %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
 {% endblock %}
 
 
@@ -74,18 +73,8 @@ Summary
         </div>
 
         <div class="govuk-grid-column-one-third">
-
-            <aside class="app-related-items" role="complementary">
-              <h2 class="govuk-heading-m" id="subsection-title">Evidence downloads</h2>
-              <nav role="navigation" aria-labelledby="subsection-title">
-                <ul class="govuk-list govuk-!-font-size-16">
-                  <li><a href="#" class="govuk-link">Download PDF</a></li>
-                  <li><a href="#" class="govuk-link">Download JPG</a></li>
-                </ul>
-              </nav>
-            </aside>
-      
-          </div>
+            {% include '../includes/evidence-downloads.njk' %}
+        </div>
 
   </div>
 
