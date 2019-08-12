@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="citizen-details" method="post">
+
+          <h1 class="govuk-heading-l">You have signed in</h1>
+
+          <!--<p>You have signed in as <strong>John Smith</strong> to the View benefit information service.</p>-->
+      
+          <button class="govuk-button">Continue</button>
+
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

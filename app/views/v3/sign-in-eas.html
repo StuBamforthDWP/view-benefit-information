@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Sign in</h1>
+
+      <p>Sign in with your Logon Identifier and One Time Passcode.</p>
+
+      <p>All fields are required.</p>
+
+      <form class="form" action="citizen-details-b" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+              Logon Identifier
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+              One Time Passcode
+          </label>
+          <span id="event-name-hint" class="govuk-hint">
+              Press the arrow button on your token and enter your PIN to retrieve the One Time Passcode.
+            </span>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="password">
+        </div>
+
+
+        <button class="govuk-button" name="signed-in" value="yes">Continue</button>
+
+
+
+          {{ govukDetails({
+            summaryText: "I can't remember my Logon Identifier or PIN",
+            text: "Contact a Service Access Manager or Organisation Adminstrator within your organisation. If you cannot remember your Logon Identifier or PIN they can help you retrieve them."
+          }) }}
+
+
+      </form>
+    </div>
+  </div>
+
+  
+
+{% endblock %}

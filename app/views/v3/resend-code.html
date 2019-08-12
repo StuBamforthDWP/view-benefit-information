@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Send me another text message</h1>
+
+      <p>The text message will contain a new code.</p>
+
+      <p>If your previous text arrives later, the code in it won’t work.</p>
+
+      <form class="form" action="text-message" method="post">
+
+        <button class="govuk-button">Send new text message</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
