@@ -9,63 +9,16 @@ Summary
 {% endblock %}
 
 
-
-
-
 {% block content %}
-
-
-{% if data['last-name'] == 'rogers' %}
-<script>
-    window.location.href = 'summary-sr'
-</script>
-{% endif %}
-
-{% if data['last-name'] == 'kyle' %}
-<script>
-    window.location.href = 'summary-sk'
-</script>
-{% endif %}
-
-{% if data['last-name'] == 'stark' %}
-<script>
-    window.location.href = 'nino'
-</script>
-{% endif %}
-
-{% if data['last-name'] == 'kent' %}
-<script>
-    window.location.href = 'summary-ck'
-</script>
-{% endif %}
-
-{% if data['last-name'] == 'banner' %}
-<script>
-    window.location.href = 'summary-bb'
-</script>
-{% endif %}
-
-{% if data['last-name'] == 'parker' %}
-<script>
-    window.location.href = 'summary-pp'
-</script>
-{% endif %}
-
-
-{% if data['last-name'] == 'castle' %}
-<script>
-    window.location.href = 'summary-fc'
-</script>
-{% endif %}
-
-
 
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Bruce Wayne</h1>
+    <div class="govuk-grid-column-full">
 
+
+            <!-- Award Summary Table -->
+            <h1 class="govuk-heading-l">Frank Castle</h1>
 
             <dl class="govuk-summary-list">
                 
@@ -74,7 +27,7 @@ Summary
                     Date of birth
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    7 April 1980
+                    21 September 1981
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -83,6 +36,10 @@ Summary
                     </dt>
                     <dd class="govuk-summary-list__value">
                       Personal Independence Payment (PIP)
+
+                      <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                          ONGOING
+                        </strong>
                     </dd>
                   </div>
                 <div class="govuk-summary-list__row">
@@ -90,7 +47,7 @@ Summary
                     Moving around score
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    8 points
+                    F - 12 points
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -98,9 +55,7 @@ Summary
                     Planning and following a journey
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    
-                    <p>E - Cannot undertake any journey because it would cause overwhelming psychological distress to the claimant</p>
-                    <p>10 points</p> 
+                      <p>E - 10 points</p>
                   </dd>
                 </div>
                
@@ -109,20 +64,43 @@ Summary
                     End date
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    1 January 2022
+                    1 October 2021
                   </dd>
                 </div>
               </dl>
+              <!-- End of Award Summary Table -->
 
-              <a href="#" role="button" class="govuk-button  govuk-!-margin-top-2 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
-    
-              <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Search another</a>
-    
+
+
+              <!-- Award Details -->
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      View full award details
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                      {% include '../includes/award-details.njk' %}
+                  </div>
+                </details>
+              <!-- End of Award Details -->
+
+
+
+              <!-- Download / Search Another -->
+                <a href="../docs/summary-frank-castle.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-6">Download as PDF</a>
+                <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-6">Search another</a>
+              <!-- End of Download / Search Another -->
               
 
 
-        </div>
- 
+
+              <!-- Previous awards -->
+                {% include '../includes/previous-awards.njk' %}
+              <!-- End of Previous Awards -->
+
+
+      </div>
   </div>
 
 

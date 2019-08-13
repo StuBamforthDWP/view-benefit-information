@@ -64,6 +64,33 @@ body#start p.sign-out{
     border-bottom: 10px solid #00BEB7 !important;
 }
 
+
+table.previous-award-head, table.previous-award{
+    table-layout: fixed;
+}
 td, th{
     vertical-align: top;
   }
+
+ .award-status {
+    float:right;
+    margin-right: -19px;
+}
+.previous-award td.govuk-table__cell{
+    border-bottom:none;
+    border-top: 1px solid #bfc1c3;
+}
+
+
+.previous-award {
+    margin-bottom: 0;
+    margin-top:10px;
+}
+.previous-award-head {
+    margin-bottom: 0;
+    border-bottom:none;
+}
+.previous-award-head th{
+    border-bottom:none;
+}
+

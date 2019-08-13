@@ -1,0 +1,96 @@
+
+                      {% set mobilityComponent %}
+
+                      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Mobility</h2>
+                      
+                      <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Activity</th>
+                            <th scope="col" class="govuk-table__header">Descriptors</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Points</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Moving around</th>
+                            <td class="govuk-table__cell"><p>
+                              F - Cannot either aided or unaided stand or move more than 1 metre
+                            </p>
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Planning and following a journey</th>
+                            <td class="govuk-table__cell">E - Cannot undertake any journey because it would cause overwhelming psychological distress to the claimant</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      
+                      
+                      {% endset -%}
+                      
+                      {% set dailyLivingComponent %}
+                      
+                      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Daily living</h2>
+                      
+                      
+                      <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Activity</th>
+                            <th scope="col" class="govuk-table__header">Descriptors</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Points</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Dressing and undressing</th>
+                            <td class="govuk-table__cell">You either need another person to tell you to get dressed or undressed, how to do it or when to keep your clothes on, or that you need prompting or assiastance to select appropriate clothing</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Communicating</th>
+                            <td class="govuk-table__cell">You can express and understand verbal information unaided</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header">Reading</th>
+                              <td class="govuk-table__cell">You can read and understand basic and complex written information either unaided or using glasses or contact lenses</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Mixing with other people</th>
+                                <td class="govuk-table__cell">You need to be prompted by another person to engage with other people</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <th scope="row" class="govuk-table__header">Making budgeting decisions</th>
+                                  <td class="govuk-table__cell">You need prompting or assistance from another person to make complex budgeting decisions</td>
+                                  <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                                </tr>
+                        </tbody>
+                      </table>
+                      {% endset -%}
+                      
+                      
+                      {{ govukTabs({
+                      items: [
+                        {
+                          label: "Mobility",
+                          id: "mobility-component",
+                          panel: {
+                            html: mobilityComponent
+                          }
+                        },
+                        {
+                          label: "Daily Living",
+                          id: "daily-living-component",
+                          panel: {
+                            html: dailyLivingComponent
+                          }
+                        }
+                      ]
+                      }) }}
