@@ -27,32 +27,32 @@ Summary
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'Stark' %}
+{% if data['last-name'] | lower  == 'stark' %}
 <script>
     window.location.href = 'nino'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'Kent' %}
+{% if data['last-name'] | lower  == 'kent' %}
 <script>
     window.location.href = 'summary-ck'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'Banner' %}
+{% if data['last-name'] | lower  == 'banner' %}
 <script>
     window.location.href = 'summary-bb'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'Parker' %}
+{% if data['last-name'] | lower  == 'parker' %}
 <script>
     window.location.href = 'summary-pp'
 </script>
 {% endif %}
 
 
-{% if data['last-name'] == 'Castle' %}
+{% if data['last-name'] | lower  == 'castle' %}
 <script>
     window.location.href = 'summary-fc'
 </script>
