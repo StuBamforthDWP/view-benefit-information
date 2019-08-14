@@ -15,44 +15,44 @@ Summary
 {% block content %}
 
 
-{% if data['last-name'] == 'rogers' %}
+{% if data['last-name'] | lower == 'rogers' %}
 <script>
     window.location.href = 'summary-sr'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'kyle' %}
+{% if data['last-name'] | lower == 'kyle' %}
 <script>
     window.location.href = 'summary-sk'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'stark' %}
+{% if data['last-name'] == 'Stark' %}
 <script>
     window.location.href = 'nino'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'kent' %}
+{% if data['last-name'] == 'Kent' %}
 <script>
     window.location.href = 'summary-ck'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'banner' %}
+{% if data['last-name'] == 'Banner' %}
 <script>
     window.location.href = 'summary-bb'
 </script>
 {% endif %}
 
-{% if data['last-name'] == 'parker' %}
+{% if data['last-name'] == 'Parker' %}
 <script>
     window.location.href = 'summary-pp'
 </script>
 {% endif %}
 
 
-{% if data['last-name'] == 'castle' %}
+{% if data['last-name'] == 'Castle' %}
 <script>
     window.location.href = 'summary-fc'
 </script>
