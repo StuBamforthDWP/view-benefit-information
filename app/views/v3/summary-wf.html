@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Summary - Bruce Wayne
+Summary - Wilson Fisk
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,62 +15,10 @@ Summary - Bruce Wayne
 {% block content %}
 
 
-{% if data['last-name'] | lower == 'rogers' %}
-<script>
-    window.location.href = 'summary-sr'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower == 'kyle' %}
-<script>
-    window.location.href = 'summary-sk'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower  == 'stark' %}
-<script>
-    window.location.href = 'nino'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower  == 'kent' %}
-<script>
-    window.location.href = 'summary-ck'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower  == 'banner' %}
-<script>
-    window.location.href = 'summary-bb'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower  == 'parker' %}
-<script>
-    window.location.href = 'summary-pp'
-</script>
-{% endif %}
-
-
-{% if data['last-name'] | lower  == 'castle' %}
-<script>
-    window.location.href = 'summary-fc'
-</script>
-{% endif %}
-
-{% if data['last-name'] | lower  == 'fisk' %}
-<script>
-    window.location.href = 'summary-wf'
-</script>
-{% endif %}
-
-
-
-
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Bruce Wayne</h1>
+            <h1 class="govuk-heading-l">Wilson Fisk</h1>
 
 
             <dl class="govuk-summary-list">
@@ -80,7 +28,7 @@ Summary - Bruce Wayne
                     Date of birth
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    7 April 1980
+                    15 June 1942
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -88,34 +36,25 @@ Summary - Bruce Wayne
                       Benefit type
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      Personal Independence Payment (PIP)
+                      Attendance Allowance
                     </dd>
                   </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Moving around score
+                    Rate
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    8 points
+                    Higher
                   </dd>
                 </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Planning and following a journey
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    
-                    <p>E - Cannot undertake any journey because it would cause overwhelming psychological distress to the claimant</p>
-                    <p>10 points</p> 
-                  </dd>
-                </div>
+                
                
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     End date
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    1 January 2022
+                    1 October 2021
                   </dd>
                 </div>
               </dl>
@@ -126,9 +65,9 @@ Summary - Bruce Wayne
     
               
 
-
         </div>
- 
+   
+
   </div>
 
 
