@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Summary
+Summary - Frank Castle
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,12 +14,12 @@ Summary
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
 
-            <!-- Award Summary Table -->
+            
             <h1 class="govuk-heading-l">Frank Castle</h1>
-
+            <!-- Award Summary Table -->
             <dl class="govuk-summary-list">
                 
                 <div class="govuk-summary-list__row">
@@ -36,6 +36,10 @@ Summary
                     </dt>
                     <dd class="govuk-summary-list__value">
                       Personal Independence Payment (PIP)
+
+                      <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                        UNDER APPEAL
+                      </strong>
                     </dd>
                   </div>
                 <div class="govuk-summary-list__row">
@@ -92,7 +96,16 @@ Summary
 
 
               <!-- Previous awards -->
-                {% include '../includes/previous-awards.njk' %}
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    View previous awards
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  {% include '../includes/previous-awards.njk' %}                
+                </div>
+              </details>
               <!-- End of Previous Awards -->
 
 

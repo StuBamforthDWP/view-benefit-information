@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Summary
+Summary - Peter Parker
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,7 +20,7 @@ Summary
     <div class="govuk-grid-column-full">
             <h1 class="govuk-heading-l">Peter Parker</h1>
 
-
+            <!-- Award Summary Table -->
             <dl class="govuk-summary-list">
                 
                 <div class="govuk-summary-list__row">
@@ -69,8 +69,9 @@ Summary
                   </dd>
                 </div>
               </dl>
+              <!-- End of Award Summary Table -->
 
-
+              <!-- Award Details -->
               <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
@@ -80,28 +81,15 @@ Summary
                   <div class="govuk-details__text">
                       {% include '../includes/award-details-tabs.njk' %}
                   </div>
-                </details>
-
-
-              <a href="../public/downloads/summary-peter-parker.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
-    
-              <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Search another</a>
-    
-              
-              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-
-              <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    View previous awards
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  {% include '../includes/previous-awards.njk' %}                
-                </div>
               </details>
+              <!-- End of Award Details -->
+
+              <!-- Download / Search Another -->
+              <a href="../public/downloads/summary-peter-parker.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
+              <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Search another</a>
+              <!-- End of Download / Search Another -->
+
+              
 
 
 
