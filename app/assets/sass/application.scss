@@ -94,3 +94,8 @@ td, th{
     border-bottom:none;
 }
 
+@media print {
+    table{
+        table-layout: fixed;
+    }
+}
