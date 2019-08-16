@@ -65,6 +65,22 @@ Summary - Bruce Wayne
 {% endif %}
 
 
+{% if data['last-name'] | lower  == 'prince' %}
+<script>
+    window.location.href = 'summary-dp'
+</script>
+{% endif %}
+
+
+{% if data['last-name'] | lower  == 'murdock' %}
+<script>
+    window.location.href = 'summary-mm'
+</script>
+{% endif %}
+
+
+
+
 
 
 <div class="govuk-grid-row">
