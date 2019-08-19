@@ -11,10 +11,16 @@ Summary - Frank Castle
 
 {% block content %}
 
+{% if data['ni-number'] != 'QQ123456A' %}
+<script>
+    window.location.href = 'mismatch'
+</script>
+{% endif %}
+
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
 
             
@@ -35,7 +41,7 @@ Summary - Frank Castle
                       Benefit type
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      Personal Independence Payment (PIP)
+                      PIP
 
                       <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
                         UNDER APPEAL
@@ -93,11 +99,10 @@ Summary - Frank Castle
               <!-- End of Download / Search Another -->
               
 
-              <!-- Previous awards -->
-                {% include '../includes/previous-awards-alt.njk' %}     
-              <!-- End of Previous Awards -->
-
-
+                 <!-- Previous awards -->
+          {% include '../includes/previous-awards.njk' %}
+          <!-- End of Previous Awards -->
+          
               
       </div>
   </div>
