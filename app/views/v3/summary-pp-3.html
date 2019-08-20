@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Summary - Peter Parker
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row guidance-layout" style="margin-right:0; margin-left:0">
+    <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Peter Parker</h1>
+    </div>
+  
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Date of Birth</span>
+        <h2 class="govuk-heading-m">15 November 1973</h2>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Benefit type</span>
+        <h2 class="govuk-heading-m">PIP</h2>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Start date</span>
+        <h2 class="govuk-heading-m">1 October 2018</h2>
+       
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Moving around score</span>        
+        <h2 class="govuk-heading-m">F - 12 points</h2>
+       
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Planning and following a journey</span>        
+        <h2 class="govuk-heading-m">E - 10 points</h2>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">End date</span>        
+      <h2 class="govuk-heading-m">1 October 2021</h2>
+    </div>
+  </div>
+
+
+              <!-- Award Details -->
+              <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      View full award details
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                      {% include '../includes/award-details-tabs.njk' %}
+                  </div>
+              </details>
+              <!-- End of Award Details -->
+
+              <!-- Download / Search Another -->
+              <a href="../public/downloads/summary-peter-parker.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
+              <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Search another</a>
+              <!-- End of Download / Search Another -->
+
+            </div>
+  </div>
+
+
+  {% endblock %}

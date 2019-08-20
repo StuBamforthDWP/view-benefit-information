@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Summary - Frank Castle
+Summary - Peter Parker
 {% endblock %}
 
 {% block beforeContent %}
@@ -9,22 +9,17 @@ Summary - Frank Castle
 {% endblock %}
 
 
+
+
+
 {% block content %}
 
-{% if data['ni-number'] != 'QQ123456A' %}
-<script>
-    window.location.href = 'mismatch'
-</script>
-{% endif %}
 
+<div class="govuk-grid-row guidance-layout" style="margin-right:0; margin-left:0">
 
-<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Peter Parker</h1>
 
-    <div class="govuk-grid-column-two-thirds">
-
-
-            
-            <h1 class="govuk-heading-l">Frank Castle</h1>
             <!-- Award Summary Table -->
             <dl class="govuk-summary-list">
                 
@@ -41,11 +36,7 @@ Summary - Frank Castle
                       Benefit type
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      PIP
-
-                      <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
-                        UNDER APPEAL
-                      </strong>
+                      Personal Independence Payment (PIP)
                     </dd>
                   </div>
                 <div class="govuk-summary-list__row">
@@ -53,7 +44,7 @@ Summary - Frank Castle
                     Moving around score
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    C - 8 points
+                    B - 4 points
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -74,37 +65,50 @@ Summary - Frank Castle
                   </dd>
                 </div>
               </dl>
-              <!-- End of Award Summary Table -->
+              
+            </div>
+          </div>
+          <!-- End of Award Summary Table -->
 
 
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
 
               <!-- Award Details -->
-              <details class="govuk-details" data-module="govuk-details">
+              <details class="govuk-details govuk-!-margin-top-6 " data-module="govuk-details">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
                       View full award details
                     </span>
                   </summary>
                   <div class="govuk-details__text">
-                      {% include '../includes/award-details-fc.njk' %}
+                      {% include '../includes/award-details-tabs.njk' %}
                   </div>
-                </details>
+              </details>
               <!-- End of Award Details -->
 
-
-
               <!-- Download / Search Another -->
-                <a href="../public/downloads/summary-frank-castle.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-9">Download as PDF</a>
-                <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-9">Search another</a>
+              <a href="../public/downloads/summary-peter-parker.pdf" role="button" class="govuk-button  govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
+              <a href="citizen-details-b?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Search another</a>
               <!-- End of Download / Search Another -->
-              
 
-                 <!-- Previous awards -->
-          {% include '../includes/previous-awards.njk' %}
-          <!-- End of Previous Awards -->
-          
               
-      </div>
+               <!-- Previous awards -->
+               <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    View previous awards
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  {% include '../includes/previous-awards-alt.njk' %}                 
+                </div>
+              </details>
+              <!-- End of Previous Awards -->
+
+
+
+            </div>
   </div>
 
 
