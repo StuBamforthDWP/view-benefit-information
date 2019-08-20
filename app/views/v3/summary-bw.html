@@ -79,7 +79,11 @@ Summary - Bruce Wayne
 {% endif %}
 
 
-
+{% if data['last-name'] | lower  == 'osborn' %}
+<script>
+    window.location.href = 'summary-no'
+</script>
+{% endif %}
 
 
 
