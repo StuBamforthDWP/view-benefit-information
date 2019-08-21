@@ -17,7 +17,7 @@ Summary - Harvey Dent
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-l">Harvey Dent</h1>
 
             {% set citizen %}
@@ -36,7 +36,7 @@ Summary - Harvey Dent
                     Benefit type
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Personal Independence Payment (PIP)
+                    Personal Independence Payment 
                   </dd>
                   <strong class="govuk-tag govuk-phase-banner__content__tag award-status-tabs">
                     ONGOING
@@ -146,7 +146,7 @@ Summary - Harvey Dent
                 {{ govukTabs({
                 items: [
                   {
-                    label: "Citizen details",
+                    label: "Summary",
                     id: "citizen",
                     panel: {
                       html: citizen
@@ -160,7 +160,7 @@ Summary - Harvey Dent
                     }
                   },
                   {
-                    label: "Daily Living",
+                    label: "Daily living",
                     id: "daily-living-component",
                     panel: {
                       html: dailyLivingComponent

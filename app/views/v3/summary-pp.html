@@ -17,7 +17,7 @@ Summary - Peter Parker
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-l">Peter Parker</h1>
 
             <!-- Award Summary Table -->
@@ -36,7 +36,7 @@ Summary - Peter Parker
                       Benefit type
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      Personal Independence Payment (PIP)
+                      Personal Independence Payment
 
                       <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
                           ONGOING
@@ -79,7 +79,7 @@ Summary - Peter Parker
                     </span>
                   </summary>
                   <div class="govuk-details__text">
-                      {% include '../includes/award-details-tabs-pp.njk' %}
+                      {% include '../includes/award-details.njk' %}
                   </div>
               </details>
               <!-- End of Award Details -->
@@ -91,17 +91,8 @@ Summary - Peter Parker
 
               
                <!-- Previous awards -->
-               <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    View previous awards
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  {% include '../includes/previous-awards-alt.njk' %}                 
-                </div>
-              </details>
-              <!-- End of Previous Awards -->
+               {% include '../includes/previous-awards.njk' %}
+               <!-- End of Previous Awards -->
 
 
 
