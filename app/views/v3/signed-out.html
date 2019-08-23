@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Signed out 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="citizen-details-b" method="post">
+
+          <h1 class="govuk-heading-l">You have signed out</h1>
+
+          <p><a href="sign-in-eas">Sign in again</a></p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
