@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Search choice
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+{% block content %}
+<form id="form" method="post" action="search-choice"></form>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+        <h1 class="govuk-heading-l">Do you know the citizen's National Insurance number?</h1>
+
+
+        <div class="govuk-form-group">
+
+          {{ govukRadios({
+            idPrefix: "search-choice",
+            name: "search-choice",
+            fieldset: {
+              legend: {
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
+
+        </div>
+
+        <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+
+    </div>
+  </div>
+</form>
+
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script>
+    $( document ).ready(function() {
+      $('#submit').on('click', function(e){
+        e.preventDefault();
+
+        if($('#search-choice-1').is(':checked')) window.location = 'nino'
+        if($('#search-choice-2').is(':checked')) window.location = 'citizen-details-c'
+      })
+    })
+  </script>
+
+{% endblock %}
+
