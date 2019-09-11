@@ -92,6 +92,12 @@ Summary - Bruce Wayne
 </script>
 {% endif %}
 
+{% if data['last-name'] | lower  == 'gordon' %}
+<script>
+    window.location.href = 'summary-jg'
+</script>
+{% endif %}
+
 
 
 <div class="govuk-grid-row">

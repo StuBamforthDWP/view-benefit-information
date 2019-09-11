@@ -80,14 +80,27 @@ Data mismatch
 {% endif %}
 
 
+{% if data['ni-number'] == 'JG123456G' %}
+<script>
+    window.location.href = 'summary-jg'
+</script>
+{% endif %}
+
+
+{% if data['ni-number'] == 'HD123456G' %}
+<script>
+    window.location.href = 'summary-hd'
+</script>
+{% endif %}
+
 
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">No record found</h1>
+    <h1 class="govuk-heading-l">Unable to find citizen details</h1>
 
-    <p>There is no benefit record for the details you've entered.</p>
+    <p>There is no match for the details you've entered.</p>
 
     <p>You can try again or call the Department for Work on Pensions on 0800 123 4567.</p>
 
