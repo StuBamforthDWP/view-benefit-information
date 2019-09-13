@@ -93,6 +93,13 @@ Data mismatch
 </script>
 {% endif %}
 
+{% if data['ni-number'] == 'DF123456G' %}
+<script>
+    window.location.href = 'summary-df'
+</script>
+{% endif %}
+
+
 
 {% if data['email-address'] == 'frankcastle@gmail.com' %}
 <script>
