@@ -100,14 +100,19 @@ Data mismatch
 </script>
 {% endif %}
 
+{% if data['email-address'] == 'ironman@gmail.com' %}
+<script>
+    window.location.href = 'summary-ts'
+</script>
+{% endif %}
+
 
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Unable to find citizen details</h1>
+    <h1 class="govuk-heading-l">Unable to find benefit information</h1>
 
-    <p>There is no match for the details you've entered.</p>
 
     <p>You can try again or call the Department for Work on Pensions on 0800 123 4567.</p>
 
