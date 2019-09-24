@@ -10,20 +10,20 @@
 {% endblock %}
 
 {% block content %}
-<form class="form" action="citizen-email" method="post">
+<form class="form" action="mismatch" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
 
         <div class="govuk-form-group">
 
-          {% set mobileHtml %}
+          {% set emailHtml %}
           {{ govukInput({
-            id: "carers-name",
-            name: "carers-name",
+            id: "email-address",
+            name: "email-address",
             classes: "govuk-input--width-20",
             label: {
-              text: "Enter the mobile number"
+              text: "Enter the email address"
             },
             attributes: {
               spellcheck: "false"
@@ -32,46 +32,24 @@
         {% endset -%}
 
 
-        {% set landlineHtml %}
-          {{ govukInput({
-            id: "carers-name",
-            name: "carers-name",
-            classes: "govuk-input--width-20",
-            label: {
-              text: "Enter the landline number"
-            },
-            attributes: {
-              spellcheck: "false"
-            }
-          }) }}
-        {% endset -%}
+
 
         {{ govukRadios({
-          idPrefix: "carers-allowance",
-          name: "carers-allowance",
+          idPrefix: "citizen-email",
+          name: "citizen-email",
           fieldset: {
             legend: {
-              text: "Do you have a phone number for the citizen?",
+              text: "Do you have an email address for the citizen?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
-          hint: {
-            text: "If you have a landline and a mobile number, enter the mobile number."
-          },
           items: [
             {
               value: "Yes",
-              text: "Yes, I have a mobile number",
+              text: "Yes",
               conditional: {
-                html: mobileHtml
-              }
-            },
-            {
-              value: "Yes",
-              text: "Yes, I have a landline number ",
-              conditional: {
-                html: landlineHtml
+                html: emailHtml
               }
             },
             {

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  National Insurance number
+  Phone Number
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,6 +24,9 @@
               classes: "govuk-input--width-10",
               attributes: {
                 spellcheck: "false"
+              },
+              hint: {
+                text: "If you have both a landline and a mobile number, enter the mobile number."
               }
             }) }}
 
