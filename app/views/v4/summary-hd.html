@@ -6,17 +6,6 @@ Summary - Harvey Dent
 
 {% block beforeContent %}
   {% include '../includes/phase-banner-sign-out.njk' %}
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Citizen search",
-        href: "nino-primary"
-      },
-      {
-        text: "Harvey Dent"
-      }
-    ]
-  }) }}
 {% endblock %}
 
 
@@ -48,6 +37,10 @@ Summary - Harvey Dent
                   </dt>
                   <dd class="govuk-summary-list__value">
                     PIP
+
+                    <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                      UNDER APPEAL
+                    </strong>
                   </dd>
                 
                 </div>
@@ -214,9 +207,15 @@ Summary - Harvey Dent
                 }) }}
 
 
+                {{ govukDetails({
+                  summaryText: "What is a transitional protection?",
+                  text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+                }) }}
+
+
               <!-- Download / Search Another -->
-              <a href="../public/downloads/summary-harvey-dent.pdf" role="button" class="govuk-button  govuk-!-margin-top-3 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
-              <a href="nino-primary?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-3 govuk-!-margin-bottom-8">Search another</a>
+              <a href="../public/downloads/summary-harvey-dent.pdf" role="button" class="govuk-button govuk-!-margin-top-6 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>
+              <a href="nino-primary?data=clear" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Search another</a>
               <!-- End of Download / Search Another -->
 
             </div>

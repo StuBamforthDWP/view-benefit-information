@@ -17,13 +17,13 @@
 
         <div class="govuk-form-group">
 
-          {% set phoneHtml %}
+          {% set mobileHtml %}
           {{ govukInput({
-            id: "phone-number",
-            name: "phone-number",
+            id: "mobile-number",
+            name: "mobile-number",
             classes: "govuk-input--width-20",
             label: {
-              text: "Enter the telephone number"
+              text: "Enter the mobile number"
             },
             attributes: {
               spellcheck: "false"
@@ -32,11 +32,30 @@
         {% endset -%}
 
 
+        {% set landlineHtml %}
+          {{ govukInput({
+            id: "landline-number",
+            name: "landline-number",
+            classes: "govuk-input--width-20",
+            label: {
+              text: "Enter the landline number"
+            },
+            attributes: {
+              spellcheck: "false"
+            }
+          }) }}
+        {% endset -%}
+
+       
+       
+
+       
 
 
-        {{ govukRadios({
-          idPrefix: "carers-allowance",
-          name: "carers-allowance",
+
+        {{ govukCheckboxes({
+          idPrefix: "phone-numbers",
+          name: "phone-numbers",
           fieldset: {
             legend: {
               text: "Do you have a telephone number for the citizen?",
@@ -44,27 +63,37 @@
               classes: "govuk-fieldset__legend--l"
             }
           },
+          hint: {
+            text: "If you have a landline number and a mobile number, enter both."
+          },
+          
           items: [
             {
-              value: "Yes",
-              text: "Yes",
+              value: "mobile-number",
+              text: "Mobile number",
               conditional: {
-                html: phoneHtml
+                html: mobileHtml
               }
             },
             {
-              value: "No",
-              text: "No"
+              value: "landline-number",
+              text: "Landline number",
+              conditional: {
+                html: landlineHtml
+              }
             }
           ]
         }) }}
 
-        </div>
+      </div>
+
 
 
         {{ govukButton({
           text: "Continue"
         }) }}
+
+        <p><a href="citizen-email">I don't know the citizen's telephone number</a></p>
 
 
     </div>
