@@ -207,10 +207,25 @@ Summary - Harvey Dent
                 }) }}
 
 
-                {{ govukDetails({
-                  summaryText: "What is a transitional protection?",
-                  text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
-                }) }}
+                
+
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                          What is transitional protection?
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p>If someone has transitional protection you can issue a Blue Badge without assessment.</p>
+ 
+                        <p>Transitional protection applies when an applicant was either:</p>
+                        <ul>
+                          <li>in receipt of the higher rate of the mobility component of DLA before moving to PIP and has requested a mandatory 
+                          reconsideration (a formal review) of their PIP award by DWP in the last year</li>
+                          <li>in receipt of a lifetime or indefinite award of the higher rate of the mobility component of DLA immediately before moving to PIP</li>
+                        </ul>                    </div>
+                  </details>
 
 
               <!-- Download / Search Another -->

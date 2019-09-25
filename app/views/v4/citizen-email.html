@@ -41,12 +41,14 @@
       
         <h1 class="govuk-heading-l">Enter citizen&rsquo;s email address</h1>
 
-        <div class="govuk-form-group">
+        <div class="govuk-form-group"> 
 
             {{ govukInput({
-              id: "Email address",
-              name: "email-address",
-              classes: "govuk-input--width-10",
+
+              id: "email",
+              name: "email",
+              type: "email",
+              autocomplete: "email",
               attributes: {
                 spellcheck: "false"
               }
