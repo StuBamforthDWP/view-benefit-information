@@ -25,7 +25,7 @@ Summary - James Gordon
 
               {% set citizen %}
               <dl class="govuk-summary-list">
-                
+
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Date of birth
@@ -39,11 +39,11 @@ Summary - James Gordon
                       Benefit type
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      PIP
+                      Personal Independence Payment
 
-                      <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
-                          UNDER APPEAL
-                        </strong>
+                      <!-- <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                          MANDATORY reconsideration
+                        </strong> -->
                     </dd>
                   </div>
                 <div class="govuk-summary-list__row">
@@ -62,8 +62,8 @@ Summary - James Gordon
                       <p>C (8 points)</p>
                   </dd>
                 </div>
-               
-               
+
+
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     End date
@@ -74,10 +74,10 @@ Summary - James Gordon
                 </div>
               </dl>
               {% endset -%}
-  
-  
+
+
               {% set mobilityComponent %}
-              
+
               <table class="govuk-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
@@ -103,8 +103,8 @@ Summary - James Gordon
                 </tbody>
               </table>
               {% endset -%}
-    
-              
+
+
               {% set dailyLivingComponent %}
                       <table class="govuk-table">
                         <thead class="govuk-table__head">
@@ -170,8 +170,8 @@ Summary - James Gordon
                         </tbody>
                       </table>
               {% endset -%}
-              
-              
+
+
                   {{ govukTabs({
                   items: [
                     {

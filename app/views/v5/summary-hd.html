@@ -22,7 +22,7 @@ Summary - Harvey Dent
 
             {% set citizen %}
             <dl class="govuk-summary-list">
-                
+
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key govuk-!-width-one-half">
                   Date of birth
@@ -36,13 +36,13 @@ Summary - Harvey Dent
                     Benefit type
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    PIP
+                    Personal Independence Payment
 
-                    <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
-                      UNDER APPEAL
-                    </strong>
+                    <!-- <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                      MANDATORY RECONSIDERATION
+                    </strong> -->
                   </dd>
-                
+
                 </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -60,7 +60,7 @@ Summary - Harvey Dent
                     <p>C (8 points)</p>
                 </dd>
               </div>
-             
+
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   End date
@@ -90,19 +90,19 @@ Summary - Harvey Dent
 
                     <p>If someone has transitional protection you can issue a Blue Badge without assessment.</p>
 
-                    <p>An applicant has transitional protection if they were receiving the higher rate of the mobility component 
+                    <p>An applicant has transitional protection if they were receiving the higher rate of the mobility component
                       of DLA before moving to PIP and one of the following applies:</p>
                     <ul>
                       <li>they were getting DLA indefinitely</li>
                       <li>they have requested a mandatory reconsideration (formal review) of their PIP award</li>
-                    </ul>                    
+                    </ul>
                   </div>
               </details>
             {% endset -%}
 
 
             {% set mobilityComponent %}
-            
+
             <table class="govuk-table">
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -125,13 +125,13 @@ Summary - Harvey Dent
                   <td class="govuk-table__cell">C - Cannot plan the route of a journey</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
                 </tr>
-                
+
               </tbody>
             </table>
             {% endset -%}
 
 
-            
+
             {% set dailyLivingComponent %}
                       <table class="govuk-table">
                         <thead class="govuk-table__head">
@@ -197,8 +197,8 @@ Summary - Harvey Dent
                         </tbody>
                       </table>
             {% endset -%}
-            
-            
+
+
                 {{ govukTabs({
                 items: [
                   {
@@ -226,10 +226,10 @@ Summary - Harvey Dent
                 }) }}
 
 
-                
 
 
-   
+
+
 
 
               <!-- Download / Search Another -->
