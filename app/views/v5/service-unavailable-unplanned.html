@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Service unavailable
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner.njk' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+
+    <p>Try again later.</p>
+
+    <p>If you need to check a Blue Badge applicant’s PIP or DLA award urgently ring the Department for Work and Pensions on 0800 1234567.</p>
+
+  </div>
+</div>
+
+{% endblock %}

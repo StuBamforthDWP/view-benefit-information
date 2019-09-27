@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Sign in through DWP Authenticate</h1>
+
+
+      <form class="form" action="email-code" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+            Email address
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+            Password
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="password">
+        </div>
+
+
+        <button class="govuk-button">Sign in</button>
+
+        <!--<p><a href="#">Create sign in details</a></p>-->
+
+        <h2 class="govuk-heading-m">Problems signing in</h2>
+        <p style="margin-bottom:5px"><a href="#">I forgot my password</a></p>
+
+          {{ govukDetails({
+            summaryText: "I forgot my email address",
+            text: "Contact your organisation. They can help."
+          }) }}
+          
+          {{ govukDetails({
+            summaryText: "I don’t have the mobile phone linked to my account",
+            text: "Contact your organisation. They can help."
+          }) }}
+
+        <!--<p><a href="#">Get help with this page</a></p>-->
+
+      </form>
+    </div>
+  </div>
+
+  
+
+{% endblock %}

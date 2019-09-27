@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Phone Number
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+<form class="form" action="citizen-email" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+        <h1 class="govuk-heading-l">Enter citizen&rsquo;s phone number</h1>
+
+        <div class="govuk-form-group">
+
+            {{ govukInput({
+              id: "Citizen Phone Number",
+              name: "phone-number",
+              classes: "govuk-input--width-10",
+              attributes: {
+                spellcheck: "false"
+              },
+              hint: {
+                text: "If you have both a landline and a mobile number, enter the mobile number."
+              }
+            }) }}
+
+            
+
+        </div>
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        <p><a href="citizen-email">I don't know the citizen's phone number</a></p>
+
+    </div>
+  </div>
+</form>
+
+{% endblock %}
