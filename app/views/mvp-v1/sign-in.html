@@ -42,12 +42,17 @@
         </div>
 
 
-        <button class="govuk-button">Sign in</button>
+        <button class="govuk-button">Continue</button>
 
         <!--<p><a href="#">Create sign in details</a></p>-->
 
         <h2 class="govuk-heading-m">Problems signing in</h2>
-        <p style="margin-bottom:5px"><a href="#">I forgot my password</a></p>
+        <p style="margin-bottom:5px"><a href="reset-password">I forgot my password</a></p>
+
+        {{ govukDetails({
+          summaryText: "I forgot my email address",
+          text: "Contact your organisation. They can help."
+        }) }}
           
           {{ govukDetails({
             summaryText: "I can’t access the email address linked to my account",
