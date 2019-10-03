@@ -1,0 +1,244 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Summary - Harvey Dent
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Harvey Dent</h1>
+
+            {% set citizen %}
+            <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                  Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21 September 1981
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Benefit type
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Personal Independence Payment
+
+                    <!-- <strong class="govuk-tag govuk-phase-banner__content__tag award-status">
+                      MANDATORY RECONSIDERATION
+                    </strong> -->
+                  </dd>
+
+                </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Moving around score
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  B (4 points)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Planning and following a journey
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p>C (8 points)</p>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  End date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1 October 2021
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Transitional protection
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p>Mandatory reconsideration</p>
+                </dd>
+              </div>
+            </dl>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                      What is transitional protection?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+
+                    <p>If someone has transitional protection you can issue a Blue Badge without assessment.</p>
+
+                    <p>An applicant has transitional protection if they were receiving the higher rate of the mobility component
+                      of DLA before moving to PIP and one of the following applies:</p>
+                    <ul>
+                      <li>they were getting DLA indefinitely</li>
+                      <li>they have requested a mandatory reconsideration (formal review) of their PIP award</li>
+                    </ul>
+                  </div>
+              </details>
+            {% endset -%}
+
+
+            {% set mobilityComponent %}
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header" >Activity</th>
+                  <th scope="col" class="govuk-table__header">Descriptors</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Points</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Moving around</th>
+                  <td class="govuk-table__cell"><p>
+                    B - Can stand and then move more than 50 metres but no more than 200 metres, either aided or unaided
+                  </p>
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Planning and following a journey</th>
+                  <td class="govuk-table__cell">C - Cannot plan the route of a journey</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                </tr>
+
+              </tbody>
+            </table>
+            {% endset -%}
+
+
+
+            {% set dailyLivingComponent %}
+                      <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Activity</th>
+                            <th scope="col" class="govuk-table__header">Descriptors</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Points</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                         <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Preparing food</th>
+                            <td class="govuk-table__cell">E - Needs supervision or assistance to either prepare or cook a simple meal</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Taking nutrition</th>
+                            <td class="govuk-table__cell">A - Can take nutrition unaided</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Managing therapy or monitoring a health condition</th>
+                            <td class="govuk-table__cell">A - Either:<br />
+                              i. does not receive medication or therapy or need to monitor a health condition; or<br />
+                              ii. can manage medication or therapy or monitor a health condition unaided</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Washing and bathing</th>
+                            <td class="govuk-table__cell">E - Needs assistance to be able to get in or out of a bath or shower</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Managing toilet needs or incontinence</th>
+                            <td class="govuk-table__cell">B - Needs to use an aid or appliance to be able to manage toilet needs or incontinence</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Dressing and undressing</th>
+                            <td class="govuk-table__cell">E - Needs assistance to be able to dress or undress their upper body</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Communicating verbally</th>
+                            <td class="govuk-table__cell">A - Can express and understand verbal information unaided</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header">Reading</th>
+                              <td class="govuk-table__cell">A - Can read and understand basic and complex written information either unaided or using spectacles or contact lensess</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Mixing with other people</th>
+                                <td class="govuk-table__cell">A - Can engage with other people unaided</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <th scope="row" class="govuk-table__header">Making budgeting decisions</th>
+                                  <td class="govuk-table__cell">A - Can manage complex budgeting decisions unaided</td>
+                                  <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                                </tr>
+                        </tbody>
+                      </table>
+            {% endset -%}
+
+
+                {{ govukTabs({
+                items: [
+                  {
+                    label: "Summary",
+                    id: "citizen",
+                    panel: {
+                      html: citizen
+                    }
+                  },
+                  {
+                    label: "Mobility",
+                    id: "mobility-component",
+                    panel: {
+                      html: mobilityComponent
+                    }
+                  },
+                  {
+                    label: "Daily living",
+                    id: "daily-living-component",
+                    panel: {
+                      html: dailyLivingComponent
+                    }
+                  }
+                ]
+                }) }}
+
+
+
+
+
+
+
+
+              <!-- Download / Search Another -->
+              <!--<a href="../public/downloads/summary-harvey-dent.pdf" role="button" class="govuk-button govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>-->
+              <a href="nino-primary?data=clear" role="button" class="govuk-button govuk-!-margin-bottom-8">Search another</a>
+              <!-- End of Download / Search Another -->
+
+            </div>
+  </div>
+
+
+  {% endblock %}
