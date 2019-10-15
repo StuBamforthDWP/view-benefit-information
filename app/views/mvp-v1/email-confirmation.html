@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Password confirmed
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+              Your password has been reset
+          </h1>
+      </div>
+
+      <p>
+          Use your new password when you sign in to View benefit information.
+      </p>
+
+      <form class="form" action="nino-primary" method="post">
+
+      <button class="govuk-button">Continue</button>
+
+  </div>
+
+{% endblock %}
