@@ -60,13 +60,19 @@ Data mismatch
 </script>
 {% endif %}
 
+{% if data['ni-number'] == 'DP123456G' %}
+<script>
+    window.location.href = 'summary-dp'
+</script>
+{% endif %}
+
 
 
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Unable to find citizen</h1>
+    <h1 class="govuk-heading-l">No record for QQ123456C</h1>
 
 
     <!--<p>You can try again or call the Department for Work on Pensions on 0800 123 4567.</p>-->
