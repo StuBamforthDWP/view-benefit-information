@@ -8,11 +8,31 @@ Summary - Bruce Wayne
   {% include '../includes/phase-banner-sign-out.njk' %}
 {% endblock %}
 
-
-
-
-
 {% block content %}
+
+{% if data['last-name'] | lower == 'rogers' %}
+<script>
+    window.location.href = 'summary-sr'
+</script>
+{% endif %}
+
+{% if data['last-name'] | lower  == 'stark' %}
+<script>
+    window.location.href = 'summary-ts'
+</script>
+{% endif %}
+
+{% if data['last-name'] | lower  == 'kent' %}
+<script>
+    window.location.href = 'summary-ck'
+</script>
+{% endif %}
+
+{% if data['last-name'] | lower  == 'banner' %}
+<script>
+    window.location.href = 'summary-bb'
+</script>
+{% endif %}
 
 
 
