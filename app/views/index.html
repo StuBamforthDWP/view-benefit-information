@@ -10,33 +10,38 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       View benefit information
-      <span class="govuk-caption-xl">v5</span>
+      <span class="govuk-caption-xl">v6</span>
     </h1>{{releaseVersion | log }}
-    <h2 class="govuk-heading-s">Created: 27 September 2019</h2>
+
+    <h2 class="govuk-heading-s">Created: 29 October 2019</h2>
 
     <h3 class="govuk-heading-s">Changes:</h3>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Consolidated and removed old and unrequired versions of the summary pages</li>
-      <li>Removed previous awards details pages</li>
-      <li>Added service unavailable pages</li>
-      <li>Updated all PIP award pages to tabs layout</li>
-      <li>Written PIP and DLA acronyms in full on summary page</li>
-      <li>Removed award status banner</li>
+      <li>Removed authentication screens</li>
+      <li>Changed H1 on NINo page to "Search for  PIP or DLA information"</li>
+      <li>Changed message on mismatch screen to "No record for QQ123456C"</li>
+      <li>Added success panel to to top of summary screen for auto-qualification cases</li>
+      <li>Added row on summary page table for non-auto cases "Automatic Blue Badge? No"</li>
+      <li>Added a summary page version containing only an auto-qulaification panel and no benefit details (Tony Stark)</li>
+
     </ul>
 
     <h3 class="govuk-heading-s">User research aims:</h3>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Observe how local authority staff use the service to search for benefit information via NINo or data matching</li>
-      <li>Observe local authority staff responses to benefit information on summary page</li>
-      <li>Test usability and understanding of summary page tab layout</li>
-      <li>Test understanding of service unavailable pages</li>
-      <li>Test understanding of phone number page (data matching disambiguator)</li>
+      <li>Observe responses to revised NINo page content</li>
+      <li>Check understanding of "No record for QQ123456C" page</li>
+      <li>Observe responses to summary table row "Automatic Blue Badge? No"</li>
+      <li>Observe responses to "Xxxxx qualifies for a Blue Badge" panel on summary page</l>
+      <li>Check understanding of service unavailable pages</li>
+
+
     </ul>
 
-    <h3 class="govuk-heading-s">Research notes</h3>
-    <p><a href="../public/downloads/Rotherham-Council-UR-feedback-2-October-2019.ppt">Research Notes - Rotherham</a></p>
+  <a href="/mvp-v2/nino-primary" class="govuk-button">Open v6 prototype</a>
 
-    <a href="/v5/sign-in-eas" class="govuk-button">Open prototype</a>
+
+
+
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -48,6 +53,34 @@
       </summary>
 
       <div class="govuk-details__text">
+
+        <span class="govuk-caption-x">v5</span>
+        <h2 class="govuk-heading-s">Created: 27 September 2019</h2>
+
+        <h3 class="govuk-heading-s">Changes:</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Consolidated and removed old and unrequired versions of the summary pages</li>
+          <li>Removed previous awards details pages</li>
+          <li>Added service unavailable pages</li>
+          <li>Updated all PIP award pages to tabs layout</li>
+          <li>Written PIP and DLA acronyms in full on summary page</li>
+          <li>Removed award status banner</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">User research aims:</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Observe how local authority staff use the service to search for benefit information via NINo or data matching</li>
+          <li>Observe local authority staff responses to benefit information on summary page</li>
+          <li>Test usability and understanding of summary page tab layout</li>
+          <li>Test understanding of service unavailable pages</li>
+          <li>Test understanding of phone number page (data matching disambiguator)</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Research notes</h3>
+        <p><a href="../public/downloads/Rotherham-Council-UR-feedback-2-October-2019.ppt">Research Notes - Rotherham</a></p>
+
+        <a href="/v5/sign-in-eas" class="govuk-button">Open prototype</a>
+
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -171,38 +204,11 @@
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <h2 class="govuk-heading-l">MVP</h2>
+        <h2 class="govuk-heading-l">Fixed MVP</h2>
 
-        <span class="govuk-caption-m">v2</span>
-        <h2 class="govuk-heading-s">Created: 29 October 2019</h2>
+      <h2 class="govuk-heading-s">Updated: 20 November 2019</h2>
 
-        <h3 class="govuk-heading-s">Changes:</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Removed authentication screens</li>
-          <li>Changed H1 on NINo page to "Search for  PIP or DLA information"</li>
-          <li>Changed message on mismatch screen to "No record for QQ123456C"</li>
-          <li>Added success panel to to top of summary screen for auto-qualification cases</li>
-          <li>Added row on summary page table for non-auto cases "Automatic Blue Badge? No"</li>
-          <li>Added a summary page version containing only an auto-qulaification panel and no benefit details (Tony Stark)</li>
-
-        </ul>
-
-        <h3 class="govuk-heading-s">User research aims:</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Observe responses to revised NINo page content</li>
-          <li>Check understanding of "No record for QQ123456C" page</li>
-          <li>Observe responses to summary table row "Automatic Blue Badge? No"</li>
-          <li>Observe responses to "Xxxxx qualifies for a Blue Badge" panel on summary page</l>
-          <li>Check understanding of service unavailable pages</li>
-
-
-        </ul>
-
-        <a href="/mvp-v2/nino-primary" class="govuk-button">Open MVP v2 prototype</a>
-      <span class="govuk-caption-m">v1</span>
-      <h2 class="govuk-heading-s">Created: 3 October 2019</h2>
-
-      <a href="/mvp-v1/nino-primary" class="govuk-button">Open MVP v1 prototype</a>
+      <a href="/mvp-v1/nino-primary" class="govuk-button">Open fixed MVP</a>
 
 
   </div>
