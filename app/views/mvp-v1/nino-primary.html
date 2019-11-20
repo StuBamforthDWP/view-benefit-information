@@ -12,10 +12,13 @@
 <form class="form" action="mismatch" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
-        <h1 class="govuk-heading-l">Enter citizen&rsquo;s National Insurance number</h1>
+
+        <h1 class="govuk-heading-l">Search for PIP or DLA information</h1>
 
         <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Enter National Insurance number
+          </label>
 
             {{ govukInput({
               id: "National Insurance number",
@@ -31,6 +34,8 @@
         {{ govukButton({
           text: "Search"
         }) }}
+
+        <p><a href="citizen-details-c">Search by name, date of birth and postcode instead</a></p>
 
 
         <!--<p><a href="citizen-details-c">Search by name, date of birth and postcode instead</a></p>-->
