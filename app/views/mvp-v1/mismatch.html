@@ -11,60 +11,30 @@ Data mismatch
 
 {% block content %}
 
-{% if data['ni-number'] == 'BW123456G' %}
+{% if data['last-name'] | lower == 'wayne' %}
 <script>
     window.location.href = 'summary-bw'
 </script>
 {% endif %}
 
-
-
-{% if data['ni-number'] == 'TS123456G' %}
+{% if data['last-name'] | lower  == 'stark' %}
 <script>
     window.location.href = 'summary-ts'
 </script>
 {% endif %}
 
-
-
-
-{% if data['ni-number'] == 'NO123456G' %}
-<script>
-    window.location.href = 'summary-no'
-</script>
-{% endif %}
-
-
-{% if data['ni-number'] == 'CK123456G' %}
+{% if data['last-name'] | lower  == 'kent' %}
 <script>
     window.location.href = 'summary-ck'
 </script>
 {% endif %}
 
-
-
-
-
-{% if data['ni-number'] == 'BB123456G' %}
+{% if data['last-name'] | lower  == 'banner' %}
 <script>
     window.location.href = 'summary-bb'
 </script>
 {% endif %}
 
-
-
-
-{% if data['ni-number'] == 'SR123456G' %}
-<script>
-    window.location.href = 'summary-sr'
-</script>
-{% endif %}
-
-{% if data['ni-number'] == 'DP123456G' %}
-<script>
-    window.location.href = 'summary-dp'
-</script>
-{% endif %}
 
 
 
