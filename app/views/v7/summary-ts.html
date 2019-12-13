@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Summary
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Tony Stark</h1>
+
+
+            <dl class="govuk-summary-list">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    21 September 1981
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Benefit
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Personal Independence Payment
+                    </dd>
+                  </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Moving around
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    F (12 points)
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Planning and following a journey
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      <p>E (10 points)</p>
+                      <p></p>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    End date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    1 October 2021
+                  </dd>
+                </div>
+              </dl>
+
+              <!--<a href="../public/downloads/summary-tony-stark.pdf" role="button" class="govuk-button  govuk-!-margin-top-2 govuk-!-margin-right-1  govuk-!-margin-bottom-1">Download as PDF</a>-->
+
+              <a href="citizen-details-c?data=clear" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Search another</a>
+
+
+
+          </form>
+        </div>
+
+
+  </div>
+
+
+  {% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in
+{% endblock %}
+
+{% block beforeContent %}
+  {% include '../includes/phase-banner-sign-out.njk' %}
+  {% include '../includes/back-button.njk' %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Send me another email</h1>
+
+      <p>The email will contain a new code.</p>
+
+      <p>If your previous email arrives later, the code in it won’t work.</p>
+
+      <form class="form" action="email-code" method="post">
+
+        <button class="govuk-button">Send new email</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
