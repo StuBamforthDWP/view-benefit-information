@@ -35,6 +35,18 @@ Data mismatch
 </script>
 {% endif %}
 
+{% if data['last-name'] | lower  == 'grey' %}
+<script>
+    window.location.href = 'summary-jg'
+</script>
+{% endif %}
+
+{% if data['last-name'] | lower  == 'gordon' %}
+<script>
+    window.location.href = 'summary-bg'
+</script>
+{% endif %}
+
 
 
 
