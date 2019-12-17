@@ -47,6 +47,17 @@ Data mismatch
 </script>
 {% endif %}
 
+{% if data['last-name'] | lower  == 'james' %}
+<script>
+    window.location.href = 'summary-jj'
+</script>
+{% endif %}
+
+{% if data['last-name'] | lower  == 'wilson' %}
+<script>
+    window.location.href = 'summary-sw'
+</script>
+{% endif %}
 
 
 
